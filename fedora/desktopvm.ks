@@ -65,3 +65,4 @@ sudo firewall-cmd --add-service=cockpit --permanent
 
 # End of the %post section
 %end
+reboot
