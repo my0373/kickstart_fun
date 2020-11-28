@@ -60,8 +60,9 @@ pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
 %post --log=/root/ks-post.log
 
 # Enable cockpit
-sudo systemctl enable --now cockpit.socket
-sudo firewall-cmd --add-service=cockpit --permanent
+systemctl enable --now cockpit.socket
+firewall-cmd --add-service=cockpit
+firewall-cmd --add-service=cockpit --permanent
 
 # End of the %post section
 %end
